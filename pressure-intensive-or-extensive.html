@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Why is pressure intensive? · Aasia Khawar</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f6f4ff;--card:#fff;--ink:#1d1b3a;--mut:#5d5a7d;--line:#e3e0f5;--bl:#3b6cf0;--pk:#e0409a;--gr:#14a05a;--or:#f0780a;--pu:#6a3df0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#13122a;--card:#1d1b3d;--ink:#f1efff;--mut:#aaa7cc;--line:#34315e}}
+:root[data-theme="dark"]{--bg:#13122a;--card:#1d1b3d;--ink:#f1efff;--mut:#aaa7cc;--line:#34315e}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.hero{background:linear-gradient(135deg,#6a3df0,#e0409a 55%,#ff9b3d);color:#fff;text-align:center;padding:44px 18px 60px}
+.hero h1{margin:6px 0;font-size:clamp(26px,5vw,42px);line-height:1.15}.hero p{max-width:620px;margin:6px auto;opacity:.95}
+.by{display:inline-block;background:#ffffff2e;border:1px solid #ffffff80;border-radius:99px;padding:5px 16px;margin-top:10px;font-weight:700}
+main{max-width:820px;margin:-30px auto 0;padding:0 14px 36px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;margin:18px 0;box-shadow:0 5px 18px #6a3df022;border-top:7px solid var(--c,var(--pu))}
+.card h2{margin:0 0 8px;color:var(--c,var(--pu));font-size:22px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:600px){.two{grid-template-columns:1fr}}
+.pill{border-radius:14px;padding:12px 14px;border-left:6px solid}
+.ex{background:#3b6cf01f;border-color:var(--bl)}.in{background:#14a05a1f;border-color:var(--gr)}.wa{background:#f0780a1f;border-color:var(--or)}.pk{background:#e0409a1f;border-color:var(--pk)}
+.pill b.t{display:block;font-size:13px;letter-spacing:.8px;text-transform:uppercase}
+.ex b.t{color:var(--bl)}.in b.t{color:var(--gr)}.wa b.t{color:var(--or)}.pk b.t{color:var(--pk)}
+canvas{width:100%;max-width:700px;height:auto;display:block;margin:8px auto;border-radius:14px;background:#6a3df00d;border:1px solid var(--line)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.tabs button{font:inherit;font-weight:700;font-size:14px;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:99px;padding:6px 14px;cursor:pointer}
+.tabs button.on{background:var(--pu);border-color:var(--pu);color:#fff}
+table{border-collapse:collapse;width:100%;margin:8px 0;font-size:15px}td,th{border:1px solid var(--line);padding:6px 8px;text-align:center}th{background:#6a3df01a}
+.calc{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14.5px;background:#14a05a14;border-radius:12px;padding:10px 14px;margin:8px 0;overflow-x:auto}
+.big{font-size:26px;font-weight:800;text-align:center;color:var(--pu);margin:6px 0}
+.rd{font-weight:700;text-align:center;min-height:2.4em}
+.fade{opacity:0;transform:translateY(14px);animation:up .7s ease forwards}.fade:nth-child(2){animation-delay:.15s}.fade:nth-child(3){animation-delay:.3s}
+@keyframes up{to{opacity:1;transform:none}}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:22px 14px;border-top:1px solid var(--line)}
+@media (prefers-reduced-motion:reduce){.fade{animation:none;opacity:1;transform:none}}
+</style></head><body>
+<header class="hero"><div>⚗️ 🧪 ⚛️</div><h1>Why is pressure an <u>intensive</u> property?</h1>
+<p>Dalton’s law adds pressures, so is pressure extensive? Watch the particles, do the sums, and the confusion disappears.</p>
+<div class="by">✍️ Prepared by Aasia Khawar</div></header>
+<main>
+
+<section class="card" style="--c:#3b6cf0"><h2>1 · The one test that decides</h2>
+<p>To test a property, <b>make an exact copy of the whole system, container included</b>, and look at the property of the combined system.</p>
+<div class="two"><div class="pill ex fade"><b class="t">Extensive</b>doubles when you double the system. Examples: mass, volume, moles of gas, total energy.</div>
+<div class="pill in fade"><b class="t">Intensive</b>stays the same. Examples: temperature, density, <b>pressure</b>.</div></div>
+<div class="pill wa" style="margin-top:12px"><b class="t">⚠️ Common mistake</b>Squeezing <i>more particles into the same box</i> is <u>not</u> doubling the system. It changes the system. That is why more particles gives more pressure.</div></section>
+
+<section class="card" style="--c:#e0409a"><h2>2 · Watch it happen</h2>
+<p>Pick a scene. Each blue or pink dot is a gas particle bouncing off the walls. The readings use <b>P = nRT/V</b> with <b>T = 300 K</b>, <b>R = 0.0821 L·atm/(mol·K)</b> and 20 particles = 0.0406 mol.</p>
+<div class="tabs" id="tabs"></div>
+<canvas id="cv" width="700" height="260" role="img" aria-label="Animated gas particles in boxes"></canvas>
+<div class="rd" id="rd"></div>
+<table><tr><th>Scene</th><th>n (mol)</th><th>V (L)</th><th>Pressure of each box</th><th>Verdict</th></tr>
+<tr><td>① One box, gas A</td><td>0.0406</td><td>1.00</td><td><b>1.00 atm</b></td><td>start</td></tr>
+<tr><td>② Two identical boxes</td><td>0.0812</td><td>2.00</td><td><b>1.00 atm</b></td><td style="color:var(--gr)"><b>same → intensive ✔</b></td></tr>
+<tr><td>③ Add gas B, same box</td><td>0.0812</td><td>1.00</td><td><b>2.00 atm</b></td><td style="color:var(--or)"><b>system changed</b></td></tr>
+<tr><td>④ Two boxes of A + B</td><td>0.1624</td><td>2.00</td><td><b>2.00 atm</b> each</td><td style="color:var(--gr)"><b>not 4 atm ✔</b></td></tr></table></section>
+
+<section class="card" style="--c:#14a05a"><h2>3 · The calculations, step by step</h2>
+<h3 style="margin:6px 0">A · One box (scene ①)</h3>
+<div class="calc">n = 0.0406 mol, V = 1.00 L, T = 300 K<br>P = nRT ÷ V = (0.0406 × 0.0821 × 300) ÷ 1.00<br>P = 1.00 atm</div>
+<h3 style="margin:6px 0">B · Copy the whole system (scene ②)</h3>
+<div class="calc">n = 2 × 0.0406 = 0.0812 mol  ← doubled<br>V = 2 × 1.00 = 2.00 L  ← doubled<br>P = (0.0812 × 0.0821 × 300) ÷ 2.00 = 2.00 ÷ 2.00 = 1.00 atm</div>
+<div class="big">n and V both ×2 → P × 1 → intensive</div>
+<h3 style="margin:6px 0">C · Add gas B to the same box (Dalton’s law, scene ③)</h3>
+<div class="calc">P(A) = 1.00 atm (as before)<br>P(B) = (0.0406 × 0.0821 × 300) ÷ 1.00 = 1.00 atm<br>P(total) = P(A) + P(B) = 1.00 + 1.00 = 2.00 atm<br>Check: (0.0812 × 0.0821 × 300) ÷ 1.00 = 2.00 atm ✔</div>
+<div class="pill pk"><b class="t">What Dalton adds</b>Dalton adds <u>different gases sharing one space</u>, each with its own partial pressure. It never adds a gas to a copy of itself.</div>
+<h3 style="margin:10px 0 6px">D · Two boxes, each with A + B (scene ④)</h3>
+<div class="calc">each box: P = (0.0812 × 0.0821 × 300) ÷ 1.00 = 2.00 atm<br>both boxes together: n = 0.1624 mol, V = 2.00 L<br>P = (0.1624 × 0.0821 × 300) ÷ 2.00 = 4.00 ÷ 2.00 = 2.00 atm  (not 4 atm)</div></section>
+
+<section class="card" style="--c:#f0780a"><h2>4 · Remember it with a classroom 🏫</h2>
+<div class="two"><div class="pill ex"><b class="t">Extensive = how many</b>Students in total: two classrooms of 30 hold 60.</div>
+<div class="pill in"><b class="t">Intensive = how crowded</b>Each room is still just as crowded. Pressure is “crowdedness” of particles, hitting each patch of wall.</div></div>
+<p>Adding 30 more students to <i>one</i> room makes it more crowded. That is scene ③, and it is why Dalton’s law raises the pressure.</p>
+<div class="pill wa"><b class="t">🎯 Exam answer in one line</b>Pressure is intensive because P = nRT/V depends on n/V, so copying the whole system doubles n and V and leaves P unchanged. Dalton’s law adds the partial pressures of different gases in the same volume; it does not make pressure scale with the amount of material.</div></section>
+</main>
+<footer>© 2026 Aasia Khawar · Curiosity Catalyst. All rights reserved. Original explanation, diagrams and animation; not to be copied or redistributed without permission.</footer>
+<script>
+(function(){
+var cv=document.getElementById('cv'),ctx=cv.getContext('2d'),sc=0,ps=[],bx=[];
+var S=[{t:'① One box',b:[[240,[20,0]]],r:'One box: n = 0.0406 mol, V = 1.00 L → P = 1.00 atm'},
+{t:'② Two identical boxes',b:[[40,[20,0]],[400,[20,0]]],r:'Copy the system: n×2, V×2 → each box is still 1.00 atm'},
+{t:'③ Add gas B (same box)',b:[[240,[20,20]]],r:'Same 1.00 L, twice the particles → 2.00 atm (Dalton: 1 + 1)'},
+{t:'④ Two boxes of A + B',b:[[40,[20,20]],[400,[20,20]]],r:'Each box 2.00 atm, not 4.00 atm'}];
+var t=document.getElementById('tabs');
+S.forEach(function(s,i){var b=document.createElement('button');b.textContent=s.t;b.onclick=function(){set(i)};t.appendChild(b)});
+function set(i){sc=i;ps=[];bx=[];S[i].b.forEach(function(b){var x=b[0],w=220,y=30,h=190;bx.push({x:x,y:y,w:w,h:h,n:b[1][0]+b[1][1]});
+for(var k=0;k<b[1][0]+b[1][1];k++){ps.push({x:x+10+Math.random()*(w-20),y:y+10+Math.random()*(h-20),vx:(Math.random()-.5)*3.2,vy:(Math.random()-.5)*3.2,c:k<b[1][0]?'#3b6cf0':'#e0409a',b:bx.length-1})}});
+document.getElementById('rd').textContent=S[i].r;
+Array.prototype.forEach.call(t.children,function(e,j){e.className=j==i?'on':''})}
+function draw(){var ink=getComputedStyle(document.body).color;ctx.clearRect(0,0,700,260);
+bx.forEach(function(b,i){ctx.fillStyle='rgba(106,61,240,.07)';ctx.fillRect(b.x,b.y,b.w,b.h);ctx.lineWidth=4;ctx.strokeStyle=ink;ctx.strokeRect(b.x,b.y,b.w,b.h);
+ctx.fillStyle=ink;ctx.font='bold 14px system-ui';ctx.textAlign='center';ctx.fillText('V = 1.00 L  ·  P = '+(b.n>20?'2.00':'1.00')+' atm',b.x+b.w/2,b.y+b.h+22)});
+ps.forEach(function(p){var b=bx[p.b];p.x+=p.vx;p.y+=p.vy;
+if(p.x<b.x+6||p.x>b.x+b.w-6)p.vx*=-1;if(p.y<b.y+6||p.y>b.y+b.h-6)p.vy*=-1;
+ctx.beginPath();ctx.arc(p.x,p.y,6,0,6.283);ctx.fillStyle=p.c;ctx.fill()});
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches)requestAnimationFrame(draw)}
+set(0);draw();
+})();
+</script></body></html>
